@@ -1,19 +1,20 @@
 # Fashion-MNIST SVM classifier
 
-This repo contains a Jupyter notebook where I train a Support Vector Machine (SVM) on the Fashion-MNIST dataset and then test it on a small clothing screenshot dataset.
+This repo contains a Jupyter notebook where I train a Support Vector Machine (SVM) on the Fashion-MNIST dataset and then test it on a small custom image dataset.
 
-The goal is to see how well a model trained on clean benchmark images (Fashion-MNIST) transfers to real screenshots from online shops.
+The aim is to see how well a model trained on clean benchmark images (Fashion-MNIST) transfers to more realistic clothing images.
 
 ## What's inside
 
-- `fashion-mnist-svm-classifier.ipynb` – main notebook with all the code, plots and discussion.
-- `requirements.txt` – Python packages needed to run the notebook.
-- `data/` – optional folder for my custom clothing screenshots, organised by class label.
+- `fashion-mnist-svm-classifier.ipynb` – the main notebook with the code, plots and discussion
+- `requirements.txt` – the Python packages needed to run the notebook
+- `data/` – files related to the datasets used in this project
+- `data/newimages.zip` – a zipped version of my custom image dataset
 
 ## How to run it
 
 1. Clone this repo.
-2. Create a virtual environment (optional but recommended).
+2. Create a virtual environment if you want to.
 3. Install the dependencies:
 
    ```bash
@@ -30,32 +31,17 @@ The goal is to see how well a model trained on clean benchmark images (Fashion-M
 
 ## Data
 
-- **Fashion-MNIST** is loaded using the standard API (I don’t upload the full dataset here).
-- **Custom clothing screenshots** (if you add them) should go under:
-
-  ```text
-  data/clothing_images/
-    0-tshirttop/
-    1-trouser/
-    2-pullover/
-    3-dress/
-    4-coat/
-    5-sandal/
-    6-shirt/
-    7-sneaker/
-    8-bag/
-    9-ankleboot/
-  ```
-
-Each folder contains `.png` or `.jpg` images for that class.
+- **Fashion-MNIST** is not uploaded in full to this repository.
+- **Custom images** are included as `data/newimages.zip`.
+- I uploaded the custom dataset as a zip file because the original image folder was too large for GitHub.
 
 ## What the notebook shows
 
 The notebook:
 
-- Trains an RBF-kernel SVM on Fashion-MNIST.
-- Reports accuracy and confusion matrices on the test set.
-- Applies the model to my clothing screenshots and compares performance.
-- Reflects on why real screenshots are harder (backgrounds, lighting, cropping, etc.).
+- trains an RBF-kernel SVM on Fashion-MNIST
+- reports accuracy and confusion matrices on the test set
+- applies the model to my custom image data
+- reflects on why real images are harder than benchmark images, for example because of backgrounds, lighting and cropping
 
-This is mainly a coursework / learning project, but I’ve tried to keep the structure clean so it can also work as a small portfolio example.
+This is mainly a coursework / learning project, but I’ve tried to keep it tidy enough to also work as a small portfolio project.
